@@ -1,4 +1,4 @@
-package com.ohgiraffers.soop_project.Dashboard.model.dto;
+package com.ohgiraffers.soop_project.dashboard.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,6 +8,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class InterestDTO {
-    private int interestId;
+    private int interestCode;
     private String interestName;
 }

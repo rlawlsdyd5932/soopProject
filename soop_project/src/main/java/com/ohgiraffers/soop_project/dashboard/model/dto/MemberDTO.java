@@ -1,4 +1,4 @@
-package com.ohgiraffers.soop_project.Dashboard.model.dto;
+package com.ohgiraffers.soop_project.dashboard.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,13 +10,13 @@ import java.sql.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MemberDTO {
-    private int memberId;
-    private String email;
+    private int userCode;
     private String nickname;
+    private String email;
     private String gender;
-    private String profile;
-    private String introduce;
-    private String memberRole;
-    private Date signupAt;
+    private String profilePic;
+    private String aboutMe;
+    private String userRole;
+    private Date signupDate;
     private String signupPlatform;
 }
