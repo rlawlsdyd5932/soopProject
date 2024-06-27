@@ -4,7 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.ohgiraffers.soop_project.dashboard.model.dao.DashboardMapper">
-
     <!-- Result Maps -->
     <resultMap id="HoneypotDTOResultMap" type="com.ohgiraffers.soop_project.dashboard.model.dto.HoneypotDTO">
         <id property="honeypotCode" column="HONEYPOT_CODE"/>
@@ -45,7 +44,20 @@
         <result property="regDate" column="REG_DATE"/>
     </resultMap>
 
-    <resultMap id="MemberDTOResultMap" type="com.ohgiraffers.soop_project.dashboard.model.dto.MemberDTO">
+<!--    <resultMap id="MemberDTOResultMap" type="com.ohgiraffers.soop_project.dashboard.model.dto.MemberDTO">-->
+<!--        <id property="userCode" column="USER_CODE"/>-->
+<!--        <result property="nickname" column="NICKNAME"/>-->
+<!--        <result property="email" column="EMAIL"/>-->
+<!--        <result property="gender" column="GENDER"/>-->
+<!--        <result property="profilePic" column="PROFILE_PIC"/>-->
+<!--        <result property="aboutMe" column="ABOUTME"/>-->
+<!--        <result property="userRole" column="USER_ROLE"/>-->
+<!--        <result property="signupDate" column="SIGNUP_DATE"/>-->
+<!--        <result property="signupPlatform" column="SIGNUP_PLATFORM"/>-->
+<!--    </resultMap>-->
+
+
+    <resultMap id="LinkBeeUserDTOResultMap" type="com.ohgiraffers.soop_project.customer.model.dto.LinkBeeUserDTO">
         <id property="userCode" column="USER_CODE"/>
         <result property="nickname" column="NICKNAME"/>
         <result property="email" column="EMAIL"/>
@@ -181,6 +193,17 @@
         FROM
             NOTICE
         LIMIT 5
+    </select>
+
+
+    <select id="getCustomerList" resultType="com.ohgiraffers.soop_project.customer.model.dto.LinkBeeUserDTO">
+        SELECT
+            USER_CODE as userCode,
+            NICKNAME as nickname,
+            EMAIL as email,
+            GENDER as gender,
+            SIGNUP_DATE as signupDate
+        FROM LINKBEE_USER
     </select>
 
 </mapper>
