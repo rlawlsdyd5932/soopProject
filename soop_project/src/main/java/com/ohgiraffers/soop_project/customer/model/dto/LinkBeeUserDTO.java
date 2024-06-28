@@ -11,8 +11,10 @@ import java.sql.Date;
 @AllArgsConstructor
 public class LinkBeeUserDTO {
     private int userCode;
+    private int honeypotCode;
     private String nickname;
     private String email;
+    private String visibilityStatus;
     private String gender;
     private String profilePic;
     private String aboutMe;

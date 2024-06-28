@@ -40,5 +40,6 @@
             SIGNUP_PLATFORM
         FROM
             LINKBEE_USER
+        WHERE user_code = #{userCode}
     </select>
 </mapper>
